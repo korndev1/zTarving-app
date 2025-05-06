@@ -13,8 +13,17 @@ import LinearGradient from "react-native-linear-gradient";
 import { color } from "../../Constant/colors";
 import Seach from "../../../components/Seach";
 import { getFontFamily } from "../../common/utils/font";
+import { useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { ADD_RECIPE_PAGE } from "../../routes/constant";
+
+type RootStackParamList = {
+  [ADD_RECIPE_PAGE]: undefined;
+};
 
 const Home = () => {
+  const navigate =
+    useNavigation<NativeStackNavigationProp<RootStackParamList>>();
   const [access_token, setAccess_Token] = useState("");
   const [text, setText] = useState("");
   const [showButton, setShowButton] = useState(false);
@@ -39,6 +48,10 @@ const Home = () => {
 
   const handleSubmit = () => {
     console.log(text);
+  };
+
+  const navigateAddRecipe = () => {
+    navigate.navigate(ADD_RECIPE_PAGE)
   };
 
   const handleShowButton = () => {
@@ -79,7 +92,7 @@ const Home = () => {
         <TouchableOpacity
           onLongPress={() => setShowButton(true)}
           onPressOut={() => setShowButton(false)}
-          onPress={handleSubmit}
+          onPress={()=>navigateAddRecipe()}
           activeOpacity={1}
         >
           <Text
@@ -87,8 +100,8 @@ const Home = () => {
               color: color.white,
               fontFamily: getFontFamily("semibold"),
               fontSize: 18,
-              width:showButton ? 100 :50,
-              textAlign:"center"
+              width: showButton ? 100 : 50,
+              textAlign: "center",
             }}
           >
             {showButton ? "add recipe" : "+"}

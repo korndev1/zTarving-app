@@ -13,5 +13,6 @@ export default {
     sign_up:"ลงทะเบียน",
     not_match_pass:"รหัสผ่านไม่ตรงกัน",
     min_pass:"รหัสผ่านขั้นต่ำ 6 ตัวอักษร",
-    pls_correct_email:"กรุณากรอกอีเมล์ให้ถูกต้อง"
+    pls_correct_email:"กรุณากรอกอีเมล์ให้ถูกต้อง",
+    setting:"ตั้งค่า"
 }

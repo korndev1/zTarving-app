@@ -18,5 +18,8 @@ export default {
   already_email_desc:"This email is already please type email again",
   regis_error_title:"Something went wrong",
   regis_error_desc:"Something went wrong please do it later",
-  ok:"Ok"
+  ok:"Ok",
+  setting:"Setting",
+  add_ingedient:"Add Ingredients"
+
 };

@@ -8,9 +8,9 @@ import { getFontFamily } from "../common/utils/font";
 const BottomTabsLayout = ({ state, descriptors, navigation }) => {
   const { t } = useTranslation();
   const getTabName = (routeName) => {
-    if (routeName == HOME_PAGE) return t("home");
-    if (routeName == LIST_PAGE) return t("list");
-    if (routeName == RECIPE_PAGE) return t("recipe");
+    if (routeName == HOME_PAGE) return t("Home");
+    if (routeName == LIST_PAGE) return t("List");
+    if (routeName == RECIPE_PAGE) return t("Recipe");
     if (routeName == SETTING_PAGE) return t("setting");
   };
 

@@ -22,9 +22,13 @@ export default function MainApp() {
   const [access_token, setAccess_Token] = useState("");
 
   useEffect(() => {
-    setTimeout(() => {
+
+    const timeOut = setTimeout(() => {
       getDataFromLocal();
     }, 3000);
+
+    return () => clearTimeout(timeOut)
+    
   }, []);
 
   const getDataFromLocal = async () => {
